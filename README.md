@@ -10,4 +10,4 @@
 
  第四章 [朴素贝叶斯](https://github.com/wzyonggege/statistical-learning-method/blob/master/NaiveBayes/GaussianNB.ipynb)
 
- 第五章 [朴素贝叶斯](https://github.com/wzyonggege/statistical-learning-method/blob/master/DecisonTree/DT.ipynb)
+ 第五章 [决策树](https://github.com/wzyonggege/statistical-learning-method/blob/master/DecisonTree/DT.ipynb)
