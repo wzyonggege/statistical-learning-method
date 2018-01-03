@@ -9,3 +9,5 @@
  第三章 [k近邻法](https://github.com/wzyonggege/statistical-learning-method/blob/master/KNearestNeighbors/KNN.ipynb)
 
  第四章 [朴素贝叶斯](https://github.com/wzyonggege/statistical-learning-method/blob/master/NaiveBayes/GaussianNB.ipynb)
+
+ 第五章 [朴素贝叶斯](https://github.com/wzyonggege/statistical-learning-method/blob/master/DecisonTree/DT.ipynb)
