@@ -15,3 +15,5 @@
  第六章 [逻辑斯谛回归](https://github.com/wzyonggege/statistical-learning-method/blob/master/LogisticRegression/LR.ipynb)
 
  第七章 [支持向量机](https://github.com/wzyonggege/statistical-learning-method/blob/master/SVM/support-vector-machine.ipynb)
+
+ 第八章 [AdaBoost](https://github.com/wzyonggege/statistical-learning-method/blob/master/AdaBoost/Adaboost.ipynb)
