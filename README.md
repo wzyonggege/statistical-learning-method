@@ -13,3 +13,5 @@
  第五章 [决策树](https://github.com/wzyonggege/statistical-learning-method/blob/master/DecisonTree/DT.ipynb)
 
  第六章 [逻辑斯谛回归](https://github.com/wzyonggege/statistical-learning-method/blob/master/LogisticRegression/LR.ipynb)
+
+ 第七章 [支持向量机](https://github.com/wzyonggege/statistical-learning-method/blob/master/SVM/support-vector-machine.ipynb)
