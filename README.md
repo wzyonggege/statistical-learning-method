@@ -18,4 +18,4 @@
 
  第八章 [AdaBoost](https://github.com/wzyonggege/statistical-learning-method/blob/master/AdaBoost/Adaboost.ipynb)
 
- 第九章 [AdaBoost](https://github.com/wzyonggege/statistical-learning-method/blob/master/EM/em.ipynb)
+ 第九章 [EM算法](https://github.com/wzyonggege/statistical-learning-method/blob/master/EM/em.ipynb)
