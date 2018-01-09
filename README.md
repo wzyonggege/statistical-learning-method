@@ -17,3 +17,5 @@
  第七章 [支持向量机](https://github.com/wzyonggege/statistical-learning-method/blob/master/SVM/support-vector-machine.ipynb)
 
  第八章 [AdaBoost](https://github.com/wzyonggege/statistical-learning-method/blob/master/AdaBoost/Adaboost.ipynb)
+
+ 第九章 [AdaBoost](https://github.com/wzyonggege/statistical-learning-method/blob/master/EM/em.ipynb)
