@@ -4,9 +4,9 @@ All notable changes to this educational repository are documented here.
 
 ## Unreleased — 2026 revival
 
-This work is not released yet. It is being reviewed as a stack of Draft pull
-requests and must not be described as merged until the maintainer approves the
-merge order.
+The 2026 maintenance stack has been merged through the master promotion PR.
+The planned `v2026.1.0` release tag has not yet been created; release gates
+remain documented in the release plan below.
 
 ### Repository foundation
 

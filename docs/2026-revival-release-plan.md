@@ -1,8 +1,8 @@
 # 2026 revival release plan
 
-Status as of 12 August 2026: implementation work is complete in the local
-maintenance stack, but the changes are still public Draft PRs and are not yet
-merged or released.
+Status as of 12 August 2026: implementation work is complete, PRs #9–#19
+were merged in order, and the maintenance stack has been promoted to `master`.
+The planned release tag has not yet been created.
 
 ## Release objective
 
@@ -11,8 +11,8 @@ the original mathematics and hand-written algorithms intact, a reproducible
 modern Python environment, executable notebooks, and lightweight correctness
 coverage.
 
-The planned tag is `v2026.1.0`. It is a plan only; no tag is created by this
-Draft PR.
+The planned tag is `v2026.1.0`. It remains a plan until the release gates below
+are checked; no tag is created by this maintenance promotion.
 
 ## Public work sequence
 
@@ -31,17 +31,19 @@ scope:
 | 8 | [#16](https://github.com/wzyonggege/statistical-learning-method/pull/16) | Logistic regression | #15 |
 | 9 | [#17](https://github.com/wzyonggege/statistical-learning-method/pull/17) | AdaBoost | #16 |
 | 10 | [#18](https://github.com/wzyonggege/statistical-learning-method/pull/18) | EM | #17 |
-| 11 | This PR | Changelog, release plan, and triage record | #18 |
+| 11 | [#19](https://github.com/wzyonggege/statistical-learning-method/pull/19) | Changelog, release plan, and triage record | #18 |
+| 12 | Final master promotion | Promote the completed maintenance stack to `master` | #19 |
 
-All algorithm PRs are Draft and all recorded CI jobs pass. Draft status is
-intentional: approval is still required before any merge.
+PRs #9–#19 were marked ready and merged in order. The final promotion preserves
+the separate PR history while making the complete maintenance stack available
+from `master`.
 
 ## Release gates
 
 Before tagging `v2026.1.0`, the maintainer should verify:
 
-1. Approve and merge PRs #9–#18 in order; do not merge a child branch before
-   its parent is accepted.
+1. Preserve the established parent-first merge order for future stacked
+   maintenance changes.
 2. Review the final diff for preservation of mathematical explanations,
    notebook outputs where meaningful, and hand-written implementations.
 3. Require the Python 3.10–3.13 GitHub Actions matrix to remain green after

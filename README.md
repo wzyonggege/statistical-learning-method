@@ -61,8 +61,8 @@ executable with your platform's package manager when you want the image.
 
 ## 2026 maintenance status
 
-**Branch:** `maintenance/2026-revival`<br>
-**Current stage:** PR 11 — Release readiness, changelog, and triage record<br>
+**Branch:** `master` after the 2026 revival promotion<br>
+**Current stage:** maintenance stack promoted; `v2026.1.0` release tag pending<br>
 **Original upstream baseline:** last commit 9 January 2018; no published release
 
 ### Compatibility audit snapshot
