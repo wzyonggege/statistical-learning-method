@@ -1,0 +1,28 @@
+[project]
+name = "statistical-learning-method"
+version = "0.1.0"
+description = "Educational notes and hand-written Python implementations of classic statistical learning methods."
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+license = { file = "LICENSE" }
+authors = [{ name = "wzyonggege" }]
+dependencies = [
+    "graphviz>=0.20,<1",
+    "matplotlib>=3.8,<4",
+    "numpy>=1.26,<3",
+    "pandas>=2.1,<4",
+    "scikit-learn>=1.4,<2",
+    "scipy>=1.11,<2",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29,<8",
+    "jupyterlab>=4,<5",
+    "nbclient>=0.10,<1",
+    "nbformat>=5.10,<6",
+    "pytest>=8,<10",
+]
+
+[tool.uv]
+package = false
