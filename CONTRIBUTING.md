@@ -27,10 +27,9 @@ uv run python scripts/validate_notebooks.py
 uv run python scripts/execute_notebooks.py
 ```
 
-The smoke command intentionally executes only the notebooks currently known to
-run on the maintenance baseline. Logistic Regression is included after its
-NumPy scalar/array compatibility fix. The compatibility table in the README
-names the remaining notebooks and their planned maintenance PR.
+The smoke command executes all nine notebooks currently known to run on the
+maintenance baseline. The README compatibility table records the runtime notes
+and maintenance history for each chapter.
 
 ## Notebook and algorithm changes
 
