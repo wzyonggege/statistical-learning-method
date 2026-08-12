@@ -12,6 +12,7 @@ from nbclient import NotebookClient
 
 
 SMOKE_NOTEBOOKS = (
+    Path("AdaBoost/Adaboost.ipynb"),
     Path("EM/em.ipynb"),
     Path("DecisonTree/DT.ipynb"),
     Path("KNearestNeighbors/KNN.ipynb"),

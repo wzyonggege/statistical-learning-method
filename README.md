@@ -61,7 +61,7 @@ executable with your platform's package manager when you want the image.
 ## 2026 maintenance status
 
 **Branch:** `maintenance/2026-revival`<br>
-**Current stage:** PR 8 — Logistic Regression modernization and correctness tests<br>
+**Current stage:** PR 9 — AdaBoost modernization and correctness tests<br>
 **Original upstream baseline:** last commit 9 January 2018; no published release
 
 ### Compatibility audit snapshot
@@ -88,7 +88,7 @@ was actually exercised during the baseline audit.
 | Decision tree | Pass | Hand-written ID3 module/tests added; Graphviz rendering is optional when `dot` is unavailable. PR 7. |
 | Logistic regression | Pass | Hand-written stochastic-gradient implementation extracted and tested; NumPy-safe sigmoid and deterministic split added in PR 8. |
 | SVM | Pass | `model_selection.train_test_split` migration complete; hand-written SMO module and tests added in PR 3. |
-| AdaBoost | Pass, slow | Executes but takes about 2.5 minutes in the audit environment; keep out of the smoke set until PR 9. |
+| AdaBoost | Pass | Hand-written threshold weak learners now handle perfect, constant, and coarse-step features; reproducible 100-run experiment added in PR 9. |
 | EM | Pass | Smoke-tested; add convergence/correctness coverage in PR 10. |
 
 The baseline notebook metadata still identifies Python 3.6.1. That metadata is
@@ -98,7 +98,7 @@ behavior is changed in PR 1.
 ### CI policy
 
 GitHub Actions validates all nine primary notebooks as nbformat 4 documents and
-executes the eight current smoke notebooks on Python 3.10, 3.11, 3.12, and
+executes all nine current smoke notebooks on Python 3.10, 3.11, 3.12, and
 3.13. The remaining notebooks are named above rather than hidden behind a
 green-but-meaningless `allow_errors` execution.
 
