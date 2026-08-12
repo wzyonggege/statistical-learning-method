@@ -44,8 +44,9 @@ uv run python scripts/validate_notebooks.py
 uv run python scripts/execute_notebooks.py
 ```
 
-The last command executes the small smoke set that is currently compatible
-with modern dependencies. The validator still checks every committed notebook.
+The last command executes all nine notebooks that are currently compatible
+with modern dependencies. The validator independently checks every committed
+notebook for notebook-format and stored-error problems.
 Open the notebooks in JupyterLab with:
 
 ```bash
@@ -61,7 +62,7 @@ executable with your platform's package manager when you want the image.
 ## 2026 maintenance status
 
 **Branch:** `maintenance/2026-revival`<br>
-**Current stage:** PR 10 — EM modernization and correctness tests<br>
+**Current stage:** PR 11 — Release readiness, changelog, and triage record<br>
 **Original upstream baseline:** last commit 9 January 2018; no published release
 
 ### Compatibility audit snapshot
@@ -99,8 +100,8 @@ behavior is changed in PR 1.
 
 GitHub Actions validates all nine primary notebooks as nbformat 4 documents and
 executes all nine current smoke notebooks on Python 3.10, 3.11, 3.12, and
-3.13. The remaining notebooks are named above rather than hidden behind a
-green-but-meaningless `allow_errors` execution.
+3.13. The matrix does not hide notebook failures behind
+`allow_errors`; compatibility notes remain in the table above.
 
 ### Planned pull-request sequence
 
@@ -125,8 +126,9 @@ green-but-meaningless `allow_errors` execution.
    edge cases, and test weight updates/classification.
 10. **PR 10 — EM:** preserve the generator-based teaching flow and add
     parameter/convergence tests.
-11. **PR 11 — Release readiness:** CHANGELOG, 2026 revival release plan,
-    final compatibility matrix, and issue/PR triage record.
+11. **PR 11 — Release readiness:** [CHANGELOG.md](CHANGELOG.md), the [2026
+   revival release plan](docs/2026-revival-release-plan.md), final
+   compatibility matrix, and [issue/PR triage record](docs/issue-triage-2026.md).
 
 At the initial audit time GitHub Issues were disabled and the repository
 reported zero pull requests, so there was no existing issue or PR backlog to
