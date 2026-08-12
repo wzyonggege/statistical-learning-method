@@ -144,10 +144,25 @@ class DTree:
         return self._tree.predict(X_test)
 
 
+# Keep the historical import path, while making the tested implementation the
+# single source used by the notebook and library consumers.
+try:
+    from .decision_tree import DTree as _DTree
+    from .decision_tree import Node as _Node
+    from .decision_tree import create_data as _create_data
+except ImportError:  # pragma: no cover - supports running dt.py directly
+    from decision_tree import DTree as _DTree
+    from decision_tree import Node as _Node
+    from decision_tree import create_data as _create_data
+
+DTree = _DTree
+Node = _Node
+create_data = _create_data
+
+
 if __name__ == '__main__':
     datasets, labels = create_data()
     data_df = pd.DataFrame(datasets, columns=labels)
     dt = DTree()
     tree = dt.fit(data_df)
     print(dt.predict(['老年', '否', '否', '一般']))
-

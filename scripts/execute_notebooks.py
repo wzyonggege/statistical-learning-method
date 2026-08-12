@@ -13,6 +13,7 @@ from nbclient import NotebookClient
 
 SMOKE_NOTEBOOKS = (
     Path("EM/em.ipynb"),
+    Path("DecisonTree/DT.ipynb"),
     Path("KNearestNeighbors/KNN.ipynb"),
     Path("LeastSquaresMethod/least_sqaure_method.ipynb"),
     Path("NaiveBayes/GaussianNB.ipynb"),
