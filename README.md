@@ -52,15 +52,16 @@ Open the notebooks in JupyterLab with:
 uv run jupyter lab
 ```
 
-The decision-tree notebook's final visualization also needs the system
-Graphviz `dot` executable. The Python `graphviz` package is included in the
-environment; install the executable with your platform's package manager when
-you want to render that cell.
+The decision-tree notebook's final visualization renders when the system
+Graphviz `dot` executable is available. Without it, the notebook completes
+and reports the optional rendering dependency while retaining the DOT source.
+The Python `graphviz` package is included in the environment; install the
+executable with your platform's package manager when you want the image.
 
 ## 2026 maintenance status
 
 **Branch:** `maintenance/2026-revival`<br>
-**Current stage:** PR 6 — Naive Bayes modernization and correctness tests<br>
+**Current stage:** PR 7 — Decision Tree modernization and correctness tests<br>
 **Original upstream baseline:** last commit 9 January 2018; no published release
 
 ### Compatibility audit snapshot
@@ -84,7 +85,7 @@ was actually exercised during the baseline audit.
 | Perceptron | Pass | Hand-written SGD module, current sklearn comparison, and classifier tests added in PR 4. |
 | k-nearest neighbors | Pass | Hand-written distance/voting module, deterministic split, and correctness tests added in PR 5. |
 | Naive Bayes | Pass | Hand-written Gaussian module, 2-D sklearn single-sample comparison, and tests added in PR 6. |
-| Decision tree | Partial | Learning cells run; final display needs the system `dot` executable. PR 7. |
+| Decision tree | Pass | Hand-written ID3 module/tests added; Graphviz rendering is optional when `dot` is unavailable. PR 7. |
 | Logistic regression | Partial | Hand-written `fit` passes a 1-D NumPy array to `math.exp`. PR 8. |
 | SVM | Pass | `model_selection.train_test_split` migration complete; hand-written SMO module and tests added in PR 3. |
 | AdaBoost | Pass, slow | Executes but takes about 2.5 minutes in the audit environment; keep out of the smoke set until PR 9. |
@@ -97,7 +98,7 @@ behavior is changed in PR 1.
 ### CI policy
 
 GitHub Actions validates all nine primary notebooks as nbformat 4 documents and
-executes the six current smoke notebooks on Python 3.10, 3.11, 3.12, and
+executes the seven current smoke notebooks on Python 3.10, 3.11, 3.12, and
 3.13. The remaining notebooks are named above rather than hidden behind a
 green-but-meaningless `allow_errors` execution.
 
@@ -127,8 +128,10 @@ green-but-meaningless `allow_errors` execution.
 11. **PR 11 — Release readiness:** CHANGELOG, 2026 revival release plan,
     final compatibility matrix, and issue/PR triage record.
 
-At audit time GitHub Issues are disabled and the repository reports zero pull
-requests, so there is no existing issue or PR backlog to merge into this plan.
+At the initial audit time GitHub Issues were disabled and the repository
+reported zero pull requests, so there was no existing issue or PR backlog to
+merge into this plan. The scoped Draft PR chain above is now the public record
+of this revival work.
 
 ## Contributing
 
