@@ -61,7 +61,7 @@ executable with your platform's package manager when you want the image.
 ## 2026 maintenance status
 
 **Branch:** `maintenance/2026-revival`<br>
-**Current stage:** PR 9 — AdaBoost modernization and correctness tests<br>
+**Current stage:** PR 10 — EM modernization and correctness tests<br>
 **Original upstream baseline:** last commit 9 January 2018; no published release
 
 ### Compatibility audit snapshot
@@ -89,7 +89,7 @@ was actually exercised during the baseline audit.
 | Logistic regression | Pass | Hand-written stochastic-gradient implementation extracted and tested; NumPy-safe sigmoid and deterministic split added in PR 8. |
 | SVM | Pass | `model_selection.train_test_split` migration complete; hand-written SMO module and tests added in PR 3. |
 | AdaBoost | Pass | Hand-written threshold weak learners now handle perfect, constant, and coarse-step features; reproducible 100-run experiment added in PR 9. |
-| EM | Pass | Smoke-tested; add convergence/correctness coverage in PR 10. |
+| EM | Pass | Generator-based Bernoulli-mixture implementation now captures fit data instead of reading global state; correctness tests added in PR 10. |
 
 The baseline notebook metadata still identifies Python 3.6.1. That metadata is
 historical, not a supported runtime declaration. No notebook implementation
