@@ -61,7 +61,7 @@ executable with your platform's package manager when you want the image.
 ## 2026 maintenance status
 
 **Branch:** `maintenance/2026-revival`<br>
-**Current stage:** PR 7 — Decision Tree modernization and correctness tests<br>
+**Current stage:** PR 8 — Logistic Regression modernization and correctness tests<br>
 **Original upstream baseline:** last commit 9 January 2018; no published release
 
 ### Compatibility audit snapshot
@@ -86,7 +86,7 @@ was actually exercised during the baseline audit.
 | k-nearest neighbors | Pass | Hand-written distance/voting module, deterministic split, and correctness tests added in PR 5. |
 | Naive Bayes | Pass | Hand-written Gaussian module, 2-D sklearn single-sample comparison, and tests added in PR 6. |
 | Decision tree | Pass | Hand-written ID3 module/tests added; Graphviz rendering is optional when `dot` is unavailable. PR 7. |
-| Logistic regression | Partial | Hand-written `fit` passes a 1-D NumPy array to `math.exp`. PR 8. |
+| Logistic regression | Pass | Hand-written stochastic-gradient implementation extracted and tested; NumPy-safe sigmoid and deterministic split added in PR 8. |
 | SVM | Pass | `model_selection.train_test_split` migration complete; hand-written SMO module and tests added in PR 3. |
 | AdaBoost | Pass, slow | Executes but takes about 2.5 minutes in the audit environment; keep out of the smoke set until PR 9. |
 | EM | Pass | Smoke-tested; add convergence/correctness coverage in PR 10. |
@@ -98,7 +98,7 @@ behavior is changed in PR 1.
 ### CI policy
 
 GitHub Actions validates all nine primary notebooks as nbformat 4 documents and
-executes the seven current smoke notebooks on Python 3.10, 3.11, 3.12, and
+executes the eight current smoke notebooks on Python 3.10, 3.11, 3.12, and
 3.13. The remaining notebooks are named above rather than hidden behind a
 green-but-meaningless `allow_errors` execution.
 
