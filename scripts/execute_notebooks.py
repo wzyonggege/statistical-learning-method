@@ -15,6 +15,7 @@ SMOKE_NOTEBOOKS = (
     Path("EM/em.ipynb"),
     Path("KNearestNeighbors/KNN.ipynb"),
     Path("LeastSquaresMethod/least_sqaure_method.ipynb"),
+    Path("NaiveBayes/GaussianNB.ipynb"),
     Path("Perceptron/Iris_perceptron.ipynb"),
     Path("SVM/support-vector-machine.ipynb"),
 )

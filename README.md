@@ -60,7 +60,7 @@ you want to render that cell.
 ## 2026 maintenance status
 
 **Branch:** `maintenance/2026-revival`<br>
-**Current stage:** PR 5 — KNN modernization and correctness tests<br>
+**Current stage:** PR 6 — Naive Bayes modernization and correctness tests<br>
 **Original upstream baseline:** last commit 9 January 2018; no published release
 
 ### Compatibility audit snapshot
@@ -83,7 +83,7 @@ was actually exercised during the baseline audit.
 | Least squares | Pass | Smoke-tested; preserve the curve-fitting explanation and outputs. PR 2. |
 | Perceptron | Pass | Hand-written SGD module, current sklearn comparison, and classifier tests added in PR 4. |
 | k-nearest neighbors | Pass | Hand-written distance/voting module, deterministic split, and correctness tests added in PR 5. |
-| Naive Bayes | Partial | Hand-written cells run; sklearn prediction needs a 2-D single-sample input. PR 6. |
+| Naive Bayes | Pass | Hand-written Gaussian module, 2-D sklearn single-sample comparison, and tests added in PR 6. |
 | Decision tree | Partial | Learning cells run; final display needs the system `dot` executable. PR 7. |
 | Logistic regression | Partial | Hand-written `fit` passes a 1-D NumPy array to `math.exp`. PR 8. |
 | SVM | Pass | `model_selection.train_test_split` migration complete; hand-written SMO module and tests added in PR 3. |
@@ -97,7 +97,7 @@ behavior is changed in PR 1.
 ### CI policy
 
 GitHub Actions validates all nine primary notebooks as nbformat 4 documents and
-executes the five current smoke notebooks on Python 3.10, 3.11, 3.12, and
+executes the six current smoke notebooks on Python 3.10, 3.11, 3.12, and
 3.13. The remaining notebooks are named above rather than hidden behind a
 green-but-meaningless `allow_errors` execution.
 
