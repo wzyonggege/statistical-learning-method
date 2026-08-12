@@ -60,7 +60,7 @@ you want to render that cell.
 ## 2026 maintenance status
 
 **Branch:** `maintenance/2026-revival`<br>
-**Current stage:** PR 3 — SVM modernization and correctness tests<br>
+**Current stage:** PR 4 — Perceptron modernization and correctness tests<br>
 **Original upstream baseline:** last commit 9 January 2018; no published release
 
 ### Compatibility audit snapshot
@@ -81,7 +81,7 @@ was actually exercised during the baseline audit.
 | Notebook | Baseline result | Finding / follow-up |
 | --- | --- | --- |
 | Least squares | Pass | Smoke-tested; preserve the curve-fitting explanation and outputs. PR 2. |
-| Perceptron | Partial | Hand-written cells run; sklearn comparison still uses removed `n_iter`. PR 4. |
+| Perceptron | Pass | Hand-written SGD module, current sklearn comparison, and classifier tests added in PR 4. |
 | k-nearest neighbors | Pass | Smoke-tested; add deterministic correctness tests in PR 5. |
 | Naive Bayes | Partial | Hand-written cells run; sklearn prediction needs a 2-D single-sample input. PR 6. |
 | Decision tree | Partial | Learning cells run; final display needs the system `dot` executable. PR 7. |
@@ -97,7 +97,7 @@ behavior is changed in PR 1.
 ### CI policy
 
 GitHub Actions validates all nine primary notebooks as nbformat 4 documents and
-executes the four current smoke notebooks on Python 3.10, 3.11, 3.12, and
+executes the five current smoke notebooks on Python 3.10, 3.11, 3.12, and
 3.13. The remaining notebooks are named above rather than hidden behind a
 green-but-meaningless `allow_errors` execution.
 
