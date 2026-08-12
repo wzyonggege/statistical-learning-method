@@ -12,9 +12,15 @@ from nbclient import NotebookClient
 
 
 SMOKE_NOTEBOOKS = (
+    Path("AdaBoost/Adaboost.ipynb"),
     Path("EM/em.ipynb"),
+    Path("DecisonTree/DT.ipynb"),
     Path("KNearestNeighbors/KNN.ipynb"),
     Path("LeastSquaresMethod/least_sqaure_method.ipynb"),
+    Path("LogisticRegression/LR.ipynb"),
+    Path("NaiveBayes/GaussianNB.ipynb"),
+    Path("Perceptron/Iris_perceptron.ipynb"),
+    Path("SVM/support-vector-machine.ipynb"),
 )
 
 

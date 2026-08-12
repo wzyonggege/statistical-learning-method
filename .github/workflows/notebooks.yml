@@ -37,5 +37,8 @@ jobs:
       - name: Validate all notebooks
         run: uv run --locked --all-groups python scripts/validate_notebooks.py
 
+      - name: Run correctness tests
+        run: uv run --locked --all-groups python -m pytest -q
+
       - name: Execute compatible smoke notebooks
         run: uv run --locked --all-groups python scripts/execute_notebooks.py

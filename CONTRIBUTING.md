@@ -14,21 +14,22 @@ development environment with [uv](https://docs.astral.sh/uv/):
 uv sync --all-groups
 ```
 
-The decision-tree visualization also needs the Graphviz `dot` executable when
-that notebook is run through its final display cell. The Python `graphviz`
-package is included in the locked environment; install the system executable
-using your platform's package manager when you need that visualization.
+The decision-tree visualization uses the Python `graphviz` package. The system
+`dot` executable is optional for notebook execution and is required only when
+you want the final tree image; without it the notebook reports the optional
+dependency and keeps the DOT source available.
 
 Before opening a pull request, run:
 
 ```bash
+uv run python -m pytest
 uv run python scripts/validate_notebooks.py
 uv run python scripts/execute_notebooks.py
 ```
 
-The smoke command intentionally executes only the notebooks currently known to
-run on the maintenance baseline. The compatibility table in the README names
-the remaining notebooks and their planned maintenance PR.
+The smoke command executes all nine notebooks currently known to run on the
+maintenance baseline. The README compatibility table records the runtime notes
+and maintenance history for each chapter.
 
 ## Notebook and algorithm changes
 
