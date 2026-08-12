@@ -39,6 +39,7 @@ creates the environment from the committed lock file:
 
 ```bash
 uv sync --all-groups
+uv run python -m pytest
 uv run python scripts/validate_notebooks.py
 uv run python scripts/execute_notebooks.py
 ```
@@ -59,7 +60,7 @@ you want to render that cell.
 ## 2026 maintenance status
 
 **Branch:** `maintenance/2026-revival`<br>
-**Current stage:** PR 1 — repository foundation and reproducible notebook baseline<br>
+**Current stage:** PR 2 — least-squares modernization and correctness tests<br>
 **Original upstream baseline:** last commit 9 January 2018; no published release
 
 ### Compatibility audit snapshot

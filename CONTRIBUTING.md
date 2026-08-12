@@ -22,6 +22,7 @@ using your platform's package manager when you need that visualization.
 Before opening a pull request, run:
 
 ```bash
+uv run python -m pytest
 uv run python scripts/validate_notebooks.py
 uv run python scripts/execute_notebooks.py
 ```
